@@ -53,3 +53,19 @@ function displayMovies(movies) {
     });
 }
 
+function createMovieCard(movieDetails) {
+    // Crear un elemento HTML para la tarjeta de la película con información detallada
+    const movieCard = `
+        <div class="movie-card">
+            <img src="${movieDetails.Poster}" alt="${movieDetails.Title}">
+            <h5>${movieDetails.Title} (${movieDetails.Year})</h5>
+            <p>${movieDetails.Plot}</p>
+            <p><strong>Elenco:</strong> ${movieDetails.Actors}</p>
+            <p><strong>Director:</strong> ${movieDetails.Director}</p>
+            <p><strong>Calificación IMDB:</strong> ${movieDetails.imdbRating}</p>
+            <p><strong>Clasificación por edad:</strong> ${movieDetails.Rated}</p>
+        </div>
+    `;
+
+    return movieCard;
+}
